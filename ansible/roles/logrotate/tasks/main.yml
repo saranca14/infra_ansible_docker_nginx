@@ -8,4 +8,4 @@
     missingok
     delaycompress
     copytruncate
-    }' >> /etc/logrotate.d/docker-container
+    }' > /etc/logrotate.d/docker-container
