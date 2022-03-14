@@ -14,3 +14,11 @@
   become: yes
   roles:
     - app
+
+
+- name: Setting up logrotate for Nginx container
+  hosts: remote
+  remote_user: ubuntu # Remote user
+  become: yes
+  roles:
+    - logrotate

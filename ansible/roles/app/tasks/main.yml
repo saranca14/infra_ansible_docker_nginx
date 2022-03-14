@@ -16,14 +16,3 @@
     chdir: "{{ docker_remote_app_dir }}"
   tags:
     - app
-  
-- name: Create logrotate for container
-  shell: |
-    echo '/var/lib/docker/containers/*/*.log {
-    rotate 7
-    daily
-    compress
-    missingok
-    delaycompress
-    copytruncate
-    }' >> /etc/logrotate.d/docker-container
